@@ -1,6 +1,3 @@
-# ITC-Research-2019-CTU-USB-RFID
-ITC Research 2019: CTU USB RFID for event attendance
-
 # Idea
 - Use USB RFID 125kHz to RFID card scanner
 - Use Firebase from Google Cloud as a database and collection process service 
