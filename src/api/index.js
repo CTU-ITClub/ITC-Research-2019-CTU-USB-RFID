@@ -14,7 +14,8 @@ const student = require("./student");
  * @param {Express} app nodejs app
  */
 function activate(app) {
-  app.use("/api/webhook", webhook).use("/api/student", student);
+  app.use("/api/webhook", webhook);
+  app.use("/api/student", student);
 }
 
 module.exports = { activate };
