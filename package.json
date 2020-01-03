@@ -1,0 +1,32 @@
+{
+  "name": "rfid-checkin",
+  "version": "1.0.0",
+  "description": "RFID Checkin with Messenger Facebook",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CTU-ITClub/RFID_Checkin.git"
+  },
+  "keywords": [
+    "rfid",
+    "checkin",
+    "rollcall",
+    "messenger",
+    "facebook",
+    "chatbot",
+    "nodejs",
+    "mongodb",
+    "itc",
+    "ctu",
+    "daomtthuan"
+  ],
+  "author": "Daomtthuan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CTU-ITClub/RFID_Checkin/issues"
+  },
+  "homepage": "https://github.com/CTU-ITClub/RFID_Checkin#readme"
+}
