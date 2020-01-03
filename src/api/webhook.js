@@ -11,7 +11,7 @@ const request = require("request");
 const messages = require("../messages");
 
 /**
- * Webhook route
+ * Webhook route api
  */
 const router = express.Router();
 
