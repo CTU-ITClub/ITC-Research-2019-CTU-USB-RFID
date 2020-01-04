@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "RFID Checkin with Messenger Facebook",
   "engines": {
-    "node": "12.13.1"
+    "vscode": "^1.22.0",
+    "node": "12.13.1",
+    "npm": "6.13.4"
   },
   "main": "index.js",
   "directories": {
