@@ -1,6 +1,6 @@
 "use strict";
 
-const apis = [require("./students")];
+const apis = [];
 
 /**
  * Activate api for app
