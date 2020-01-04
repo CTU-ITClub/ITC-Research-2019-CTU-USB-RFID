@@ -33,11 +33,10 @@ function send(id, text) {
 
 // Authenticate
 router.get("/", (req, res) => {
-  if (req.query["hub.verify_token"] === "daomtthuan" /*authentication code is "daomtthuan"*/) {
+  if (req.query["hub.verify_token"] === "daomtthuan") {
     res.send(req.query["hub.challenge"]);
-  } else {
-    res.send("Error, wrong validation token");
   }
+  res.send("Error, wrong validation token");
 });
 
 // Receive and analyze
