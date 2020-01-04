@@ -52,9 +52,9 @@ router.post("/", (req, res) => {
         if (message.message.text) {
           var text = message.message.text;
           if (text == "hi" || text == "hello") {
-            sendMessage(senderId, "Trung Quân's Bot: " + "Xin Chào");
+            send(senderId, "Trung Quân's Bot: " + "Xin Chào");
           } else {
-            sendMessage(senderId, "Trung Quân's Bot: " + "Xin lỗi, câu hỏi của bạn chưa có trong hệ thống, chúng tôi sẽ cập nhật sớm nhất.");
+            send(senderId, "Trung Quân's Bot: " + "Xin lỗi, câu hỏi của bạn chưa có trong hệ thống, chúng tôi sẽ cập nhật sớm nhất.");
           }
         }
       }
