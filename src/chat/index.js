@@ -41,16 +41,34 @@ router.get("/", (req, res) => {
 });
 
 // Receive and analyze
-router.post("/", function(req, res) {
-  console.log(req.body.entry);
-  req.body.entry.forEach(entry => {
-    entry.messaging.forEach(message => {
-      const id = message.sender.id;
-      const text = message.message.text.toLowerCase();
-      send(id, messages[text] === undefined ? messages.unknow : messages[text]);
-    });
-  });
+router.post("/", (req, res) => {
+  var entries = req.body.entry;
+  for (var entry of entries) {
+    var messaging = entry.messaging;
+    for (var message of messaging) {
+      var senderId = message.sender.id;
+      if (message.message) {
+        // Nếu người dùng gửi tin nhắn đến
+        if (message.message.text) {
+          var text = message.message.text;
+          if (text == "hi" || text == "hello") {
+            sendMessage(senderId, "Trung Quân's Bot: " + "Xin Chào");
+          } else {
+            sendMessage(senderId, "Trung Quân's Bot: " + "Xin lỗi, câu hỏi của bạn chưa có trong hệ thống, chúng tôi sẽ cập nhật sớm nhất.");
+          }
+        }
+      }
+    }
+  }
   res.status(200).send("OK");
+  // req.body.entry.forEach(entry => {
+  //   entry.messaging.forEach(message => {
+  //     const id = message.sender.id;
+  //     const text = message.message.text.toLowerCase();
+  //     send(id, messages[text] === undefined ? messages.unknow : messages[text]);
+  //   });
+  // });
+  // res.status(200).send("OK");
 });
 
 module.exports = router;
