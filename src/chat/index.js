@@ -14,7 +14,7 @@ function send(id, text) {
     qs: {
       /** Access code token, get it at https://developers.facebook.com/apps/504492863527014/messenger/settings/*/
       access_token:
-        "EAAHK1WXsGGYBABNiNDDcqMFV1JCRcRtufnoRHw5XRaQG1lMJDcTLoNGbkMZAxVc3V54cT9QKX205E3nRGtDjcjdIvkddLnpv5swRDU4XZAg4u4hFvpjmSauZAvWWa4wC2FAXvrBQZCav1T0rtUH2eaZBpLCnSCI0uwZCYzZApmXQV421xntHdljT0HvdET5iqEZD"
+        "EAAHK1WXsGGYBAMzh6DRi385e0Q62j9DsHuBSSytPaR7Bw055MSSh7yHdaQuC6m8mR1UTHPRZAOZBVh2leFMij4hDGvTyJnyxirINKQmbHnDhIuShYQz0Quzsnio7lEICj8j94vRu60mvKGQrdC7il8aSZBEpvCGntwBlAfb2aVtDpfYrlWVD87qOWYMNRAZD"
     },
     method: "POST",
     /** Message send in JSON type */
