@@ -1,9 +1,8 @@
 "use strict";
 
-const express = require("express");
+const router = require("express").Router();
 const request = require("request");
 const messages = require("./messages");
-const router = express.Router();
 
 /**
  * Send message to client
