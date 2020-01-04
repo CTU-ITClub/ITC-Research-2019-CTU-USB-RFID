@@ -1,5 +1,3 @@
-"use strict";
-
 const hello = require("./hello");
 const unknow = require("./unknow");
 

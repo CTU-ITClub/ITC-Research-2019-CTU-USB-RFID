@@ -1,5 +1,3 @@
-"use strict";
-
 const mongodb = require("mongodb");
 
 const uri = "mongodb+srv://daomtthuan:V7gPx8TOmdWt6T16@daomtthuan-83mbv.mongodb.net/test?retryWrites=true&w=majority";
