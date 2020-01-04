@@ -29,7 +29,4 @@ async function get(name, query) {
   return documents;
 }
 
-/**
- * Provider api
- */
 module.exports = { get };

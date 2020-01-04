@@ -3,9 +3,12 @@
   "version": "1.0.0",
   "description": "RFID Checkin with Messenger Facebook",
   "main": "index.js",
+  "directories": {
+    "doc": "docs",
+    "test": "test"
+  },
   "scripts": {
-    "test": "node ./test/index.js",
-    "dev": "node index.js"
+    "test": "node ./test/index.js"
   },
   "repository": {
     "type": "git",

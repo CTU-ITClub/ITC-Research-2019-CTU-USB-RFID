@@ -1,6 +1,8 @@
-const router = require("express").Router();
+const express = require("express");
 const request = require("request");
 const messages = require("./messages");
+
+const router = express.Router();
 
 /**
  * Send message to client
@@ -51,7 +53,4 @@ router.post("/", function(req, res) {
   res.status(200).send("OK");
 });
 
-/**
- * Webhook route api
- */
 module.exports = router;
