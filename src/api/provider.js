@@ -1,12 +1,7 @@
-/**
- * @author Daomtthuan
- * @email dao.mt.thuan@gmail.com
- * @create date 2020-01-04 09:24:42
- * @modify date 2020-01-04 09:42:32
- * @desc Provider api
- */
+"use strict";
 
 const mongodb = require("mongodb");
+
 const uri = "mongodb+srv://daomtthuan:V7gPx8TOmdWt6T16@daomtthuan-83mbv.mongodb.net/test?retryWrites=true&w=majority";
 const database = "rfid-checkin";
 

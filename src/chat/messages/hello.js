@@ -1,10 +1,4 @@
-/**
- * @author Daomtthuan
- * @email dao.mt.thuan@gmail.com
- * @create date 2020-01-03 17:17:51
- * @modify date 2020-01-04 09:20:29
- * @desc Hello message
- */
+"use strict";
 
 /**
  * Create message

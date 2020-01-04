@@ -1,10 +1,4 @@
-/**
- * @author Daomtthuan
- * @email dao.mt.thuan@gmail.com
- * @create date 2020-01-03 14:19:24
- * @modify date 2020-01-03 17:34:56
- * @desc Webhook chatbot
- */
+"use strict";
 
 const express = require("express");
 const request = require("request");
