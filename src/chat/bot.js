@@ -1,6 +1,6 @@
 const express = require("express");
 const request = require("request");
-const messages = require("./messages");
+const script = require("./script");
 
 const router = express.Router();
 
@@ -42,33 +42,17 @@ router.get("/", (req, res) => {
 
 // Receive and analyze
 router.post("/", (req, res) => {
-  var entries = req.body.entry;
-  for (var entry of entries) {
-    var messaging = entry.messaging;
-    for (var message of messaging) {
-      var senderId = message.sender.id;
-      if (message.message) {
-        // Nếu người dùng gửi tin nhắn đến
-        if (message.message.text) {
-          var text = message.message.text;
-          if (text == "hi" || text == "hello") {
-            send(senderId, "Trung Quân's Bot: " + "Xin Chào");
-          } else {
-            send(senderId, "Trung Quân's Bot: " + "Xin lỗi, câu hỏi của bạn chưa có trong hệ thống, chúng tôi sẽ cập nhật sớm nhất.");
-          }
+  req.body.entry.forEach(entry => {
+    entry.messaging.forEach(messaging => {
+      if (messaging.message !== undefined) {
+        if (messaging.message.text !== undefined) {
+          const message = messaging.message.text.toLowerCase();
+          send(messaging.sender.id, script[message] !== undefined ? script[message] : script.unknow);
         }
       }
-    }
-  }
+    });
+  });
   res.status(200).send("OK");
-  // req.body.entry.forEach(entry => {
-  //   entry.messaging.forEach(message => {
-  //     const id = message.sender.id;
-  //     const text = message.message.text.toLowerCase();
-  //     send(id, messages[text] === undefined ? messages.unknow : messages[text]);
-  //   });
-  // });
-  // res.status(200).send("OK");
 });
 
 module.exports = router;
