@@ -2,20 +2,21 @@
  * @author Daomtthuan
  * @email dao.mt.thuan@gmail.com
  * @create date 2020-01-03 17:34:51
- * @modify date 2020-01-03 18:20:11
+ * @modify date 2020-01-04 09:42:29
  * @desc Api for app
  */
 
-const webhook = require("./webhook");
-const student = require("./student");
+const apis = [require("./students")];
 
 /**
  * Activate api for app
- * @param {Express} app nodejs app
+ * @param {any} app nodejs app
  */
 function activate(app) {
-  app.use("/api/webhook", webhook);
-  app.use("/api/student", student);
+  apis.forEach(api => app.use(api.uri, api.router));
 }
 
-module.exports = { activate };
+/**
+ * Api for app
+ */
+module.exports = { activate: activate };

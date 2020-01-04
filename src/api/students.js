@@ -2,16 +2,12 @@
  * @author Daomtthuan
  * @email dao.mt.thuan@gmail.com
  * @create date 2020-01-03 18:16:00
- * @modify date 2020-01-03 18:16:00
+ * @modify date 2020-01-04 09:42:34
  * @desc Student api
  */
 
 const express = require("express");
 const mongodb = require("mongodb");
-
-/**
- * Student route api
- */
 const router = express.Router();
 
 const client = new mongodb.MongoClient("mongodb://127.0.0.1:27017", {
@@ -62,4 +58,7 @@ router.post("/insert", (request, response) => {
   else send(response, 501, "error");
 });
 
-module.exports = router;
+/**
+ * Student route api
+ */
+module.exports = { uri: "/api/students", router };

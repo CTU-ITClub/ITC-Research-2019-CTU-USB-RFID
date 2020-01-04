@@ -8,11 +8,7 @@
 
 const express = require("express");
 const request = require("request");
-const messages = require("../messages");
-
-/**
- * Webhook route api
- */
+const messages = require("./messages");
 const router = express.Router();
 
 /**
@@ -57,11 +53,14 @@ router.post("/", function(req, res) {
   req.body.entry.forEach(entry => {
     entry.messaging.forEach(message => {
       const id = message.sender.id;
-      const text = message.message.text;
+      const text = message.message.text.toLowerCase();
       send(id, messages[text] === undefined ? messages.unknow : messages[text]);
     });
   });
   res.status(200).send("OK");
 });
 
+/**
+ * Webhook route api
+ */
 module.exports = router;
