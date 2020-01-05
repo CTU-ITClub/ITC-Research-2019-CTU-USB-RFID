@@ -1,4 +1,5 @@
 const request = require("request");
+const message = require("./message");
 
 /**
  * Send message to client
@@ -36,11 +37,15 @@ function talk(id, command) {
   switch (command.toLowerCase()) {
     case "hello":
     case "hi":
-      send(id, "Hello, I'm RFID Checkin chatbox. I'm from IT Club Can Tho University. Do you need any help?");
+      send(id, message.hello);
+      break;
+
+    case "help":
+      send(id, message.help);
       break;
 
     default:
-      send(id, "Sorry, I can't understand.");
+      send(id, message.unknow);
       break;
   }
 }
