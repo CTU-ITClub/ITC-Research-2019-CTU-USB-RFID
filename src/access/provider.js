@@ -48,6 +48,7 @@ async function insert(name, document) {
  * @param {string} name Name collection
  * @param {any} query Selector query
  * @param {any} document Updated document
+ * @returns Updated ID
  */
 async function update(name, query, document) {
   const client = await openConnection();
@@ -61,8 +62,9 @@ async function update(name, query, document) {
  * Delete one document
  * @param {string} name Name collection
  * @param {any} query Selector query
+ * @returns "true" if success, otherwise "false"
  */
-async function del(name, query) {
+async function drop(name, query) {
   const client = await openConnection();
   const collection = client.db().collection(name);
   const result = await collection.deleteOne(query);
@@ -70,4 +72,4 @@ async function del(name, query) {
   return result.deletedCount == 1;
 }
 
-module.exports = { select, insert, update, delete: del };
+module.exports = { select, insert, update, drop };

@@ -3,16 +3,19 @@ const access = require("../access/access-students");
 
 const router = express.Router();
 
+// Select: GET api/students
 router.get("/", async (req, res) => {
   const students = await access.select();
   res.status(200).send(students);
 });
 
+// Select: GET api/students/<studetn id>
 router.get("/:id", async (req, res) => {
   const students = await access.select(req.param.id);
   res.status(200).send(students);
 });
 
+// Insert: POST api/students
 router.post("/", async (req, res) => {
   const _id = await access.insert(req.body);
   if (_id === undefined) {
@@ -22,6 +25,7 @@ router.post("/", async (req, res) => {
   }
 });
 
+// Update: PUT api/students
 router.put("/", async (req, res) => {
   const _id = await access.update(req.body);
   if (_id === undefined) {
@@ -31,8 +35,9 @@ router.put("/", async (req, res) => {
   }
 });
 
+// Drop: DELETE api/students
 router.delete("/", async (req, res) => {
-  const success = await access.delete(req.body);
+  const success = await access.drop(req.body);
   if (success) {
     res.status(200).send("Deleted");
   } else {

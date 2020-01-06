@@ -2,8 +2,8 @@ const text = require("./text");
 const messenger = require("./messenger");
 
 /**
- * React
- * @param {string} id ID sender
+ * Talk to client
+ * @param {string} id ID client
  * @param {string} command Command name
  */
 function talk(id, command) {
