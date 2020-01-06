@@ -1,6 +1,4 @@
-const students = require("./students");
-
-const apis = [students];
+const apis = [require("./students")];
 
 /**
  * Activate api for app

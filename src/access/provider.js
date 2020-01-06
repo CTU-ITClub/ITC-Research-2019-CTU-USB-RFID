@@ -17,11 +17,12 @@ async function openConnection() {
 }
 
 /**
- * Get documents array
+ * Select documents
  * @param {string} name Name collection
  * @param {any} query Query for findding
+ * @returns Documents array
  */
-async function get(name, query) {
+async function select(name, query) {
   const client = await openConnection();
   const collection = client.db(database).collection(name);
   const documents = await collection.find(query).toArray();
@@ -29,4 +30,18 @@ async function get(name, query) {
   return documents;
 }
 
-module.exports = { get };
+/**
+ * Insert one document
+ * @param {string} name Name collection
+ * @param {any} object Inserted object
+ * @returns Inserted ID
+ */
+async function insert(name, object) {
+  const client = await openConnection();
+  const collection = client.db(database).collection(name);
+  const result = await collection.insertOne(object);
+  client.close();
+  return result.insertedId;
+}
+
+module.exports = { select, insert };
