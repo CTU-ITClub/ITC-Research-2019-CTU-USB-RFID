@@ -27,6 +27,4 @@ function sendText(id, text) {
   });
 }
 
-module.exports = {
-  sendText
-};
+module.exports = { sendText };

@@ -1,7 +1,6 @@
 const mongodb = require("mongodb");
 
-const uri = "mongodb+srv://daomtthuan:V7gPx8TOmdWt6T16@daomtthuan-83mbv.mongodb.net/test?retryWrites=true&w=majority";
-const database = "rfid-checkin";
+const uri = "mongodb+srv://daomtthuan:V7gPx8TOmdWt6T16@daomtthuan-83mbv.mongodb.net/rfid-checkin";
 
 /**
  * Open connection
@@ -19,12 +18,12 @@ async function openConnection() {
 /**
  * Select documents
  * @param {string} name Name collection
- * @param {any} query Query for findding
+ * @param {any} query Query for selector
  * @returns Documents array
  */
 async function select(name, query) {
   const client = await openConnection();
-  const collection = client.db(database).collection(name);
+  const collection = client.db().collection(name);
   const documents = await collection.find(query).toArray();
   client.close();
   return documents;
@@ -33,15 +32,42 @@ async function select(name, query) {
 /**
  * Insert one document
  * @param {string} name Name collection
- * @param {any} object Inserted object
+ * @param {any} document Inserted document
  * @returns Inserted ID
  */
-async function insert(name, object) {
+async function insert(name, document) {
   const client = await openConnection();
-  const collection = client.db(database).collection(name);
-  const result = await collection.insertOne(object);
+  const collection = client.db().collection(name);
+  const result = await collection.insertOne(document);
   client.close();
   return result.insertedId;
 }
 
-module.exports = { select, insert };
+/**
+ * Update one document
+ * @param {string} name Name collection
+ * @param {any} query Selector query
+ * @param {any} document Updated document
+ */
+async function update(name, query, document) {
+  const client = await openConnection();
+  const collection = client.db().collection(name);
+  const result = await collection.updateOne(query, { $set: document });
+  client.close();
+  return result.upsertedId;
+}
+
+/**
+ * Delete one document
+ * @param {string} name Name collection
+ * @param {any} query Selector query
+ */
+async function del(name, query) {
+  const client = await openConnection();
+  const collection = client.db().collection(name);
+  const result = await collection.deleteOne(query);
+  client.close();
+  return result.deletedCount == 1;
+}
+
+module.exports = { select, insert, update, delete: del };

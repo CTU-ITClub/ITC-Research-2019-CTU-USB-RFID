@@ -1,4 +1,4 @@
-const apis = [require("./students")];
+const apis = [require("./api-students")];
 
 /**
  * Activate api for app
