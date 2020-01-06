@@ -1,11 +1,11 @@
-const apis = [require("./api-students")];
+const apis = [require("./students")];
 
-/**
- * Activate api for app
- * @param {any} app nodejs app
- */
-function activate(app) {
-  apis.forEach(api => app.use(api.uri, api.router));
-}
-
-module.exports = { activate };
+module.exports = {
+  /**
+   * Activate api for app
+   * @param {any} app nodejs app
+   */
+  activate: app => {
+    apis.forEach(api => app.use(api.root, api.router));
+  }
+};

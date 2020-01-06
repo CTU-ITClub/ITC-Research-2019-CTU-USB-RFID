@@ -1,6 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const path = require("path");
+const os = require("os");
 const api = require("./src/api");
 const chatbot = require("./src/chatbot");
 
@@ -14,4 +15,4 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use("/chatbot", chatbot);
 app.get("/", (req, res) => res.render());
 api.activate(app);
-app.listen(port, () => console.log(`RFID Checkin Server is listening on port ${port}`));
+app.listen(port);
