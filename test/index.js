@@ -42,11 +42,12 @@ async function select(worksheet, query) {
 
 (async () => {
   const database = await connect("14DpzOr9AFdYpZR1GVxyXoNA30qMjxZCY2V_7AUrwG9Y", creds);
-  const students = database.access("students");
-  const rows = await students.select({ offset: 1 });
+  const table = database.access("students");
+  const rows = await table.select({ offset: 1 });
   rows.forEach(row => {
     console.log(row.id);
     console.log(row.name);
+    console.log(row.email);
     console.log();
   });
 })();
