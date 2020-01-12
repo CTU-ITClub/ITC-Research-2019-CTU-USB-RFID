@@ -1,8 +1,8 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const path = require("path");
-const api = require("./src/api");
-const chatbot = require("./src/chatbot");
+const api = require("./server/api");
+const chatbot = require("./server/chatbot");
 
 const app = express();
 const port = process.env.PORT || 3000;
