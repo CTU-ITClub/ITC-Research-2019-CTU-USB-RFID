@@ -10,7 +10,7 @@
   "scripts": {
     "start": "node .",
     "test": "node ./test",
-    "build": "tsc -p tsconfig.json",
+    "build-dev": "tsc -p tsconfig.json && nodemon .",
     "dev": "nodemon ."
   },
   "repository": {
