@@ -1,0 +1,12 @@
+{
+    "type": "service_account",
+    "project_id": "rfid-checkin-264418",
+    "private_key_id": "4e5562ce9e6e75ead839ae47fb03fb99622e7130",
+    "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEuwIBADANBgkqhkiG9w0BAQEFAASCBKUwggShAgEAAoIBAQCj80BLKGrJjvIB\nqIqFD1OLTfi0zsdarrygwMbxggq6OJb2h/dybIXQyXXoqaOL/c0HUk1xsUj8eDA+\nFijPjJew9ZGaGtOwYywx37DuZI/AXIYcctPjzqJt9GdZ8oXgrdbq9tTdpqdm5mGd\nRC4EuvcghpePwoTX6H8+s8PuYbKwH5Uhqz6d0reopesg6yviytpqC5Y6VEhIX21v\nWusf1IcKLvrvinjqN+7gNLrSJt17tbmzVYVHQwJ4qsbWeSbTxEXa0RwyF0LH3NKh\npI08QdVX/bpsD/0LbeWzBHPvj7IsNE2LeSCVhRtA5GE2Z4UcJvMyofST480OLnvZ\njd0BRbUNAgMBAAECgf9ESHfInNPdE1xt862Et+56Id063PsZixlf2nixq6UyiWTf\nJrDXlpQ74/CNGJdUx+5BpukuQ3URbYXdZwJC/VD9JDjg5QzfTX/FUUL+08bSbe+P\nbIgG1m9kEkSpo4CFOxUgHJyLnZ7RMTlUf6Tj1lAn/TvYpCW1mWQFCRLVz4tSm3mk\nq+swLlC6rSFGeMl5yS4wWNqks+IKgyF2qYcA0sdH8Yutwvrle5aDf6fzNE2axy91\neTCic32+EZzuHs5qtQvxnrsCppWTdcy7jUbRWy5NW/XSNxhb4/YORRIRkeItBNHd\nn8raAjIHDBE47wngvnJUTS3WAnOFg2oZe8NevukCgYEA1Wa1GpXRmCZ0AYIt/BDx\nVolotmp3OEFc8K9LuSxYwz7k7gF1dmMfK5ZrzoKovOzLFp5LHNn6LViJdid5KmsX\n0hvKHgyHRujQTYSuNvYq95d2VsUBuoXqEQm/Ngyi2AssPSd0AiaOrZNKlaAmdBNE\nLfK/0pzH3HBXkSoOeqS7nb8CgYEAxK171Z17HK7fqACWulmZFj043EKTPDvzMEvr\n15+DcE8NKUL64m2nxEHXIpAfFHp/8y/YFUDLQHBdxGoQhMbJfDbB01YAQcGYvkY3\nMfVImMiEF2a254Fw69cHUBGDpKMUgZ8jmv8uLcc3SWR4kentn3VBwKKDuHBAjewx\n0JJ8uDMCgYBTXkuUNkFqomMhj7ztQ6U0/HuHADLRLF/lu2Xm0pdet3xyKum7tV+h\nBKPbSponLI7uqCqJ+/JLstII8cTZOHtW3vpoINbccemmzxXMbQE+NtLJdS+GsfhO\nbbNgpzEbG8pNndMpX+zPjMJPkABVyo0RMkuUOSGvUcgz8u0zJpYROwKBgBELuB/b\ndkAWJ+w3oNily07SH4t3eatOxtT4v4gAmzOwpkNdOsFFH7Uyv6KPOyJbO5uoGeI9\nq1/6XSYYyzW2xN+vHz1hxsPsM4DKNR5vU8tqFYixrkiCP3cxO8EEw5QRTkWttThJ\nxYbSLUh/HLQIwj9/uiMn8qKZl/606dxZ1dVhAoGBAL0TNgiMFCEnLNBVb8N176xd\nZUZwOBcxo4TlIVCnEffYbsSC2ifkKjPaLMIVQVEELeLa0ja8ryEQ+kHi7cynNegz\nhPGBigY44+4+V8mw1fOh1syf1h2fHVVw9RVp6QvMkL3S8978uCP5C+gzzuemZwzo\ntU7jMU5t9o0GoKXYObkS\n-----END PRIVATE KEY-----\n",
+    "client_email": "administrator@rfid-checkin-264418.iam.gserviceaccount.com",
+    "client_id": "109377228508172678907",
+    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+    "token_uri": "https://oauth2.googleapis.com/token",
+    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+    "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/administrator%40rfid-checkin-264418.iam.gserviceaccount.com"
+}

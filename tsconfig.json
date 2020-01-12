@@ -2,7 +2,13 @@
   "compilerOptions": {
     "target": "ESNext",
     "module": "CommonJS",
-    "outDir": "server"
+    "outDir": "server",
+    "declaration": true,
+    "declarationDir": "server/@types",
+    "strict": true,
+    "alwaysStrict": true,
+    "moduleResolution": "Node",
+    "resolveJsonModule": true
   },
   "include": ["./src/**/*"]
 }

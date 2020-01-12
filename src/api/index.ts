@@ -1,11 +1,16 @@
-const apis = [require("./students")];
+import StudentApi = require("./StudentApi");
 
-module.exports = {
+const apis = [StudentApi];
+
+/** Api */
+const api = {
   /**
    * Activate api for app
-   * @param {any} app nodejs app
+   * @param {Express} app nodejs app
    */
-  activate: app => {
-    apis.forEach(api => app.use(api.root, api.router));
+  activate: (app: any): void => {
+    apis.forEach(api => app.use(api.route, api.api));
   }
 };
+
+export = api;

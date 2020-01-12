@@ -10,7 +10,8 @@
   "scripts": {
     "start": "node .",
     "test": "node ./test",
-    "build": "tsc -p tsconfig.json"
+    "build": "tsc -p tsconfig.json",
+    "dev": "nodemon ."
   },
   "repository": {
     "type": "git",
@@ -39,11 +40,12 @@
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
     "request": "^2.88.0",
-    "sds-kit": "^0.3.0"
+    "sds-kit": "^0.4.1"
   },
   "devDependencies": {
     "@types/express": "^4.17.2",
     "@types/node": "^13.1.6",
-    "@types/request": "^2.48.4"
+    "@types/request": "^2.48.4",
+    "nodemon": "^2.0.2"
   }
 }

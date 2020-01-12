@@ -1,4 +1,7 @@
+import IEntry = require("../interfaces/IEntry");
+
 import express = require("express");
+
 import Bot = require("./Bot");
 
 const router = express.Router();
@@ -14,7 +17,7 @@ router.get("/", (req, res) => {
 
 // Receive and analyze: POST /chatbot
 router.post("/", (req, res) => {
-  req.body.entry.forEach(entry => {
+  req.body.entry.forEach((entry: IEntry) => {
     entry.messaging.forEach(messaging => {
       if (messaging.message !== undefined) {
         if (messaging.message.text !== undefined) {
