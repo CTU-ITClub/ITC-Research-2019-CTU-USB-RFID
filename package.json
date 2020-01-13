@@ -2,16 +2,16 @@
   "name": "rfid-checkin",
   "version": "1.0.0",
   "description": "RFID Checkin with Messenger Facebook",
-  "main": "index.js",
+  "main": "server/index.js",
   "directories": {
     "doc": "docs",
     "test": "test"
   },
   "scripts": {
-    "start": "node .",
-    "test": "node ./test",
-    "build-dev": "tsc -p tsconfig.json && nodemon .",
-    "dev": "nodemon ."
+    "start": "node server",
+    "test": "node test",
+    "build-dev": "tsc -p tsconfig.json && nodemon server",
+    "dev": "nodemon server"
   },
   "repository": {
     "type": "git",
