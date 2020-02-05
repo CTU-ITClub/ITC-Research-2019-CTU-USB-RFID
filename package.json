@@ -1,0 +1,51 @@
+{
+  "name": "rfid-checkin",
+  "version": "1.0.0",
+  "description": "RFID Checkin with Messenger Facebook",
+  "main": "server/index.js",
+  "directories": {
+    "doc": "docs",
+    "test": "test"
+  },
+  "scripts": {
+    "start": "node server",
+    "test": "node test",
+    "build-dev": "tsc -p tsconfig.json && nodemon server",
+    "dev": "nodemon server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CTU-ITClub/RFID_Checkin.git"
+  },
+  "keywords": [
+    "rfid",
+    "checkin",
+    "rollcall",
+    "messenger",
+    "facebook",
+    "chatbot",
+    "nodejs",
+    "mongodb",
+    "itc",
+    "ctu",
+    "daomtthuan"
+  ],
+  "author": "Daomtthuan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CTU-ITClub/RFID_Checkin/issues"
+  },
+  "homepage": "https://github.com/CTU-ITClub/RFID_Checkin#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "request": "^2.88.0",
+    "sds-kit": "^0.4.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.2",
+    "@types/node": "^13.1.6",
+    "@types/request": "^2.48.4",
+    "nodemon": "^2.0.2"
+  }
+}

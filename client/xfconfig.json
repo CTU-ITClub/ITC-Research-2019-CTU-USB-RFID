@@ -1,0 +1,20 @@
+{
+  "name": "rfid-checkin",
+  "version": "1.0.0",
+  "title": "RFID Checkin",
+  "description": "RFID Checkin with Messenger Facebook",
+  "author": "Daomtthuan",
+  "app": {
+    "html": "view.html",
+    "css": "style.css",
+    "js": "script.js",
+    "jquery": true,
+    "loading": "<div class=\"spinner-border text-primary\" role=\"status\"><span class=\"sr-only\">Loading...</span></div>",
+    "src": {
+      "app": "./src/app",
+      "components": "./src/components",
+      "xframe": "https://xframejs.github.io/core/1.0.0/dist/xframe.min.js"
+    }
+  },
+  "plugins": {}
+}
